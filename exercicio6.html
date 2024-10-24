@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Nome de Aventuras</title>
+</head>
+<body>
+
+    <h1>Gerador de Nome de Aventuras</h1>
+    <p><strong>Nome gerado:</strong> <span id="nomeAventura">Clique no botão para gerar um nome</span></p>
+    <button onclick="gerarNome()">Gerar Nome de Aventura</button>
+
+    <script>
+        
+        const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+
+    
+        function gerarNome() {
+            let title = titles[Math.floor(Math.random() * titles.length)];
+            let name = names[Math.floor(Math.random() * names.length)];
+            let classe = classes[Math.floor(Math.random() * classes.length)];
+            let location = locations[Math.floor(Math.random() * locations.length)];
+
+            
+            document.getElementById('nomeAventura').innerText = `${title} ${name}, o ${classe} de ${location}`;
+        }
+    </script>
+
+</body>
+</html>
