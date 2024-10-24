@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar H1</title>
+</head>
+<body>
+
+    <h1 id="meuTitulo">Título Original</h1>
+    <button onclick="modificarTitulo()">Mudar Título</button>
+
+    <script>
+        function modificarTitulo() {
+            const titulo = document.getElementById('meuTitulo');
+            titulo.textContent = 'Novo Título';
+            titulo.style.color = 'red';  
+            titulo.style.fontSize = '30px'; 
+        }
+    </script>
+</body>
+</html>
