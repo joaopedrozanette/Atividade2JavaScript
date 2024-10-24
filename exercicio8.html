@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor de Sorvete</title>
+</head>
+<body>
+
+    <h1>Qual sabor de sorvete você gosta?</h1>
+    <input type="text" id="sabor" placeholder="Digite o sabor...">
+    <p id="mensagem"></p>
+
+    <script>
+        const input = document.getElementById('sabor');
+        const mensagem = document.getElementById('mensagem');
+
+        input.addEventListener('input', function() {
+            const texto = input.value.trim();
+            if (texto.length > 3) {
+                if (texto.toLowerCase() === 'chocolate') {
+                    mensagem.innerText = "Eu amo sorvete de chocolate!";
+                } else if (texto.toLowerCase() === 'flocos') {
+                    mensagem.innerText = "Ahh, mas chocolate é o meu favorito...";
+                } else {
+                    mensagem.innerText = "Ahh, eu esperava um sabor de sorvete...";
+                }
+            } else {
+                mensagem.innerText = ""; 
+            }
+        });
+    </script>
+
+</body>
+</html>
