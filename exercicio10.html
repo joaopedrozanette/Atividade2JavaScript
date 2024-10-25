@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,9 +106,20 @@
                 if(inputs[3].value!= inputs[2].value){
 
                 }else{
-                    
+
                 }
             }
+            inputs[3].addEventListener('input', confirmaSenha)
+
+
+            document.querySelector('form').addEventListener('submit', (evento)=>{
+                
+                evento.preventDefault()
+                validaNome()
+                validaEmail()
+                validaSenha()
+                confirmaSenha()
+            })
             
     </script>
      
